@@ -1,0 +1,16 @@
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\bin\Debug\net5.0\ORDC Map Test.exe
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\bin\Debug\net5.0\ORDC Map Test.deps.json
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\bin\Debug\net5.0\ORDC Map Test.runtimeconfig.json
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\bin\Debug\net5.0\ORDC Map Test.runtimeconfig.dev.json
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\bin\Debug\net5.0\ORDC Map Test.dll
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\bin\Debug\net5.0\ref\ORDC Map Test.dll
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\bin\Debug\net5.0\ORDC Map Test.pdb
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.csprojAssemblyReference.cache
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.AssemblyInfoInputs.cache
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.AssemblyInfo.cs
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.csproj.CoreCompileInputs.cache
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.dll
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ref\ORDC Map Test.dll
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.pdb
+C:\Users\Brenner\Desktop\Programming\ORDC Map Test\obj\Debug\net5.0\ORDC Map Test.genruntimeconfig.cache
