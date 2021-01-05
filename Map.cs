@@ -162,6 +162,11 @@ namespace ORDC_Map_Test
             } 
         }
 
+        //TODO
+        public void drawArea() {
+
+        }
+
         public void drawPlayerArea() {
             for (int i = Math.Max(player.getYPos() - 4, 0); i < Math.Min(player.getYPos() + 5, 100); i++) {
                 for (int j = Math.Max(player.getYPos() - 4, 0); j < Math.Min(player.getYPos() + 5, 100); j++) {
@@ -175,20 +180,68 @@ namespace ORDC_Map_Test
             }
         }
 
+        public bool isUnconnectedDoor(int xPos, int yPos) {
+            bool isUnconnected = false;
+            int i = -1;
+            do {
+                if (map[yPos + i, xPos] == 0 || map[yPos, xPos + i] == 0) {
+                    isUnconnected = true;
+                }
+                i *= -1;
+            } while (i != -1);
+            return isUnconnected;
+        }
+
+        public List<int[]> findUnconnectedDoors() {
+            List<int[]> unconnectedDoors = new List<int[]>();
+            for (int i = 0; i < map.GetLength(0); i++) {
+                for (int j = 0; j < map.GetLength(1); j++) {
+                    if (map[i, j] == -5 && isUnconnectedDoor(j, i)) {
+                        unconnectedDoors.Add(new int[]{i, j});
+                    }
+                }
+            }
+            return unconnectedDoors;
+        }
+
+        public int getDistance(int[] coord1, int[] coord2) {
+            return coord1[0] + coord2[0] + coord1[1] + coord2[1];
+        }
+
+        public int[,,,] findNearbyDoors() {
+            List<int[]> unconnectedDoors = findUnconnectedDoors();
+            foreach (int[] doorCoords in unconnectedDoors) {
+                for (int i = doorCoords[0] - 3; i < doorCoords[0] + 3; i++) {
+                    for (int j = doorCoords[1] - 3; j < doorCoords[1] + 3; j++) {
+                        Console.Write(map[i, j] + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            return null;
+        }
+
         public static void Main(String[] args) {
-            Map map = new Map();
-            map.generateMapStart(7);
+            //Map map = new Map();
+            //map.generateMapStart(7);
             //Room room1 = new Room(1);
             //map.placeRoom(room1, 50 - room1.getWidth()/2, 50 - room1.getHeight()/2);
             //map.drawPlayerArea();
             //Room room2 = new Room(3);
             //map.placeRoomAtDoorway(room2, room1, 'E');
             //map.drawPlayerArea();
-            map.drawWholeMap();
+            //map.drawWholeMap();
+            //Console.WriteLine("\n");
+            //map.findNearbyDoors();
             //Console.WriteLine(room.getDoorDirections()[0]);
             //Console.WriteLine(room.getDoorDirections()[1]);
             //Console.WriteLine(room.getDoorCoordinates('S')[0]);
             //Console.WriteLine(room.getDoorCoordinates('S')[1]);
+            AStar star = new AStar('2', '3', '7');
+            List<int[]> path = star.search();
+            foreach (int[] coords in path) {
+                Console.WriteLine("X: " + coords[1] + " Y: " + coords[0]);
+            }
         }
     }
 }
